@@ -8,6 +8,8 @@
     "@testing-library/user-event": "^7.2.1",
     "auth0-js": "^9.12.2",
     "axios": "^0.19.2",
+    "check-node-version": "^4.0.2",
+    "googleapis": "^47.0.0",
     "jwt-decode": "^2.2.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
