@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="drawing.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient923">
+      <stop
+         style="stop-color:#0000aa;stop-opacity:1"
+         offset="0"
+         id="stop919" />
+      <stop
+         style="stop-color:#ff5555;stop-opacity:1"
+         offset="1"
+         id="stop921" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient923"
+       id="linearGradient925"
+       x1="94.07888"
+       y1="168.17609"
+       x2="189.76137"
+       y2="70.889977"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="352.76882"
+     inkscape:cy="597.83682"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:measure-start="0,0"
+     inkscape:measure-end="0,0"
+     inkscape:window-width="1400"
+     inkscape:window-height="872"
+     inkscape:window-x="40"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g932"
+       inkscape:export-filename="/home/kaio/madruga.png"
+       inkscape:export-xdpi="15.43718"
+       inkscape:export-ydpi="15.43718"
+       transform="translate(-26.726953,-3.7417734)">
+      <rect
+         inkscape:export-ydpi="15.43718"
+         inkscape:export-xdpi="15.43718"
+         inkscape:export-filename="/home/kaio/madruga.png"
+         ry="13.898015"
+         y="70.889977"
+         x="84.457176"
+         height="105.30419"
+         width="105.30419"
+         id="rect917"
+         style="fill:url(#linearGradient925);fill-opacity:1;stroke-width:2.26499987;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-filename="/home/kaio/madruga.png"
+         transform="scale(0.26458333)"
+         inkscape:export-ydpi="15.43718"
+         inkscape:export-xdpi="15.43718"
+         id="path10"
+         d="M 520,303.94922 A 161.42858,161.42858 0 0 0 358.57227,465.37695 161.42858,161.42858 0 0 0 479.72266,621.57227 L 519.90039,489.98828 A 105.71428,105.71428 0 0 1 482.85742,409.66211 105.71428,105.71428 0 0 1 557.80078,308.62891 161.42858,161.42858 0 0 0 520,303.94922 Z m 161.25391,156.53906 a 105.71428,105.71428 0 0 1 -92.68164,54.88867 105.71428,105.71428 0 0 1 -68.47071,-25.20117 l 26.63086,134.2168 a 161.42858,161.42858 0 0 0 134.69531,-159.01563 161.42858,161.42858 0 0 0 -0.17382,-4.88867 z"
+         style="stroke-width:0.99999994"
+         inkscape:connector-curvature="0" />
+      <circle
+         inkscape:export-filename="/home/kaio/madruga.png"
+         inkscape:export-ydpi="15.43718"
+         inkscape:export-xdpi="15.43718"
+         r="6.939364"
+         cy="129.69234"
+         cx="137.6102"
+         id="path86"
+         style="fill:#ff0066;stroke-width:0.26458332" />
+    </g>
+  </g>
+</svg>

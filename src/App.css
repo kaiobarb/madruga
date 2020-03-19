@@ -1,8 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
+
 .navbar-right { margin-right: 0px !important}
 .log {
     margin: 5px 20px 0 0;
-  }
-  .videos {
-      border: 1px solid red;
-        height:400px;
-      }
+}
+.videos {
+  border: 1px solid red;
+  height:400px;
+}
+#root {
+  font-family: 'Sen', sans-serif;
+  background: #334d50;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #cbcaa5, #334d50);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom left, #cbcaa5, #334d50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.dark.expand-on-hover {
+  transition: 0.35s;
+  padding: 0px;
+  background-color: #343A40;
+}
+
+.dark.expand-on-hover:hover {
+  padding: 10px;
+  background-color: crimson;
+}
+
+.display {
+  max-width: 950px;
+}
