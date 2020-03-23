@@ -68,6 +68,7 @@ class App extends Component {
         });
       }
       this.setState({ videos: videoList })
+      this.setState({activeVideo: videoList[0]})
       //videoIdString = response.result.items[0].id.videoId;
       return;
     })
