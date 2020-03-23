@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './custom.scss';
 import './App.css';
 import Upload from './components/Upload';
 import Display from './components/Display';
@@ -11,12 +12,24 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      videos: ["SZpjovHCQd8", "SZpjovHCQd8", "SZpjovHCQd8", "SZpjovHCQd8", "SZpjovHCQd8", "SZpjovHCQd8",],
+      searchQuery: '',
+      videos: [{ id: "ZhstyJSNKME", description: "huehue", title: "lofi hip hop - brazil songs playlist", },
+      { id: "ZhstyJSNKME", description: "huehue", title: "lofi hip hop - brazil songs playlist", },
+      { id: "ZhstyJSNKME", description: "huehue", title: "lofi hip hop - brazil songs playlist", },
+      { id: "ZhstyJSNKME", description: "huehue", title: "lofi hip hop - brazil songs playlist", },
+      { id: "ZhstyJSNKME", description: "huehue", title: "lofi hip hop - brazil songs playlist", },
+      { id: "ZhstyJSNKME", description: "huehue", title: "lofi hip hop - brazil songs playlist", },],
       gapiReady: false,
+      activeVideo: {},
     }
   }
 
-  loadYoutubeApi() {
+  // Maybe give each video an id corresponding to its index in the column?
+  handleCardClick = (theVideo) => {
+    this.setState({activeVideo: theVideo})
+  }
+
+  loadYoutubeApi = () => {
     const API_KEY = 'AIzaSyBEa-dJTJHoQjkGRHgJl7ajsfiBUJZzOnY'
     const script = document.createElement("script");
     script.src = "https://apis.google.com/js/client.js";
@@ -37,42 +50,47 @@ class App extends Component {
     const prefix = ['IMG ', 'IMG_', 'IMG-', 'DSC '];
     const postfix = [' MOV', '.MOV', ' .MOV'];
     const query = prefix[Math.floor(Math.random() * prefix.length)] + String(Math.floor(Math.random() * 9999) + 999) + postfix[Math.floor(Math.random() * postfix.length)];
+    this.setState({searchQuery:query})
     window.gapi.client.youtube.search.list({
       part: "snippet",
-      maxResults: "25",
+      maxResults: "12",
       q: query,
     }).then(response => {
-      /*const videoList = []
+      const videoList = []
       for (const video of response.result.items) {
-        videoList.push(video.id.videoId);
+        videoList.push({
+          id: video.id.videoId,
+          description: video.snippet.description,
+          title: video.snippet.title,
+          url: video.snippet.thumbnails.medium.url,
+          channelTitle: video.snippet.channelTitle,
+          date: video.snippet.publishedAt,
+        });
       }
       this.setState({ videos: videoList })
-      //videoIdString = response.result.items[0].id.videoId;*/
+      //videoIdString = response.result.items[0].id.videoId;
       return;
     })
   }
 
   componentDidMount() {
-    //this.loadYoutubeApi();
+    this.loadYoutubeApi();
   }
 
   render() {
-    
+
     return (
       <>
-      <Nav />
-      <div className="ml-5 mt-5">
+        <Nav />
+        <div className='body'>
         <Router history={browserHistory}>
           <Route path="/" component={() => {
-            return <Display ready={true} videos={this.state.videos} />;
+            return <Display ready={true} searchQuery={this.state.searchQuery} videos={this.state.videos} onClick={this.handleCardClick} activeVideo={this.state.activeVideo} />;
           }} />
           <Route path="/upload" component={Upload} onEnter={requireAuth} />
           <Route path="/callback" component={Callback} />
         </Router>
-        <div>
-
         </div>
-      </div>
       </>
     )
   }

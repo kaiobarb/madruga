@@ -2,13 +2,17 @@ import React , {Component} from 'react'
 import { Link } from 'react-router'
 import { login, logout, isLoggedIn } from '../utils/AuthService'
 import '../App.css'
+import madrugaIcon from '../icon.png'
 
 class Nav extends Component {
   render() {
     return (
-      <nav className='navbar bg-light navbar-default rounded'>
+      <nav className='shadow fixed-top navbar dark text-light navbar-default'>
         <div className='navbar-header'>
-          <Link className='navbar-brand' to='/'>Madruga</Link>
+          <Link className='navbar-brand' to='/'>
+            Madruga
+            <img className='ml-2' src={madrugaIcon} width='30' height='30'/>
+          </Link>
         </div>
         <ul className="nav navbar-nav">
           <li>

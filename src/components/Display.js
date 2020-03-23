@@ -1,29 +1,30 @@
 import React, { Component } from 'react';
-//import { Link } from 'react-router';
-import Nav from './Nav';
-import YouTube from 'react-youtube'
-import YoutubeCard from './YoutubeCard'
+import YoutubeCard from './YoutubeCard';
+import SideNav from './SideNav';
 
 class Display extends Component {
-  render() {    
+  render() {
     return (
-      <div>
-        
-        <h3> Random Videos </h3>
-        <hr />
-        <div className='row display'>
-
-          {this.props.ready ?
-              this.props.videos.map(id =>
-                <YoutubeCard id={id}/>
-              )
-            :
-            <div className="spinner-border" role="status">
-              <span className="sr-only">Loading...</span>
+      <div className=''>
+        <div className='container ml-3 mt-5 results'>
+          <div className='row mt-5'>
+            <h3 className=' col'> Default Filename </h3>
+            <h3 className='col text-muted right-align'>Search Terms: {this.props.searchQuery}</h3>
+          </div>
+          <hr />
+            <div className='row cardcolumns'>
+              {this.props.ready ?
+                this.props.videos.map((video) =>
+                  <YoutubeCard video={video} onClick={this.props.onClick}/>
+                )
+                :
+                <div className="spinner-border" role="status">
+                  <span className="sr-only">Loading...</span>
+                </div>
+              }
             </div>
-          }
-
         </div>
+        <SideNav video={this.props.activeVideo}/>
       </div>
     )
   }

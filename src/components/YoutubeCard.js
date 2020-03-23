@@ -2,19 +2,24 @@ import React, { Component } from 'react';
 import YouTube from 'react-youtube';
 
 export default class YoutubeCard extends Component {
+  handleClick() {
+    this.props.onClick(this.props.video);
+  }
+
   render() {
-    const opts = {
-      height: '230',
-      width: '410',
-      playerVars: { // https://developers.google.com/youtube/player_parameters
-        autoplay: 1
-      }
-    }
+    
     return (
-      <div className='card rounded my-2 mx-auto dark expand-on-hover align-self-center text-light'>
-        <YouTube opts={opts} containerClassName='col text-center my-4' videoId={this.props.id} />
-        <div className='content mx-3 mb-3'>Lorem ipsum</div>
-      </div>        
-    ) 
+      <div onClick={() => this.handleClick()} className='card mx-auto mb-3 shadow rounded dark expand-on-hover text-light'>
+        <img className='card-img-top py-2 px-2' src={this.props.video.url}/>
+        {/* <YouTube className='rounded' opts={opts} containerClassName='col-6 text-center my-4' videoId={this.props.id} /> */}
+        {this.props.description ?
+        <div className='content px-3 pb-3'>
+          {this.props.video.description}
+        </div>
+        :
+        null
+        }
+      </div>
+    )
   }
 }
