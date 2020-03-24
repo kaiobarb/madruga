@@ -46,7 +46,7 @@ class App extends Component {
     document.body.appendChild(script);
   }
 
-  youtubeSearch() {
+  youtubeSearch = () => {
     const prefix = ['IMG ', 'IMG_', 'IMG-', 'DSC '];
     const postfix = [' MOV', '.MOV', ' .MOV'];
     const query = prefix[Math.floor(Math.random() * prefix.length)] + String(Math.floor(Math.random() * 9999) + 999) + postfix[Math.floor(Math.random() * postfix.length)];
@@ -86,7 +86,13 @@ class App extends Component {
         <div className='body'>
         <Router history={browserHistory}>
           <Route path="/" component={() => {
-            return <Display ready={true} searchQuery={this.state.searchQuery} videos={this.state.videos} onClick={this.handleCardClick} activeVideo={this.state.activeVideo} />;
+            return <Display 
+              ready={true} 
+              searchQuery={this.state.searchQuery} 
+              videos={this.state.videos} 
+              onClick={this.handleCardClick}
+              refresh={this.youtubeSearch} 
+              activeVideo={this.state.activeVideo} />;
           }} />
           <Route path="/upload" component={Upload} onEnter={requireAuth} />
           <Route path="/callback" component={Callback} />
