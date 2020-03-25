@@ -1,7 +1,10 @@
+<center>
+![](src/icon.png) 
 # Madruga
+<center>
 > Stumble upon Youtube's obscure, amateur, and historical videos.
 
-[madruga.now.sh](See it live)
+[See it live](madruga.now.sh)
 
 ![](madruga-screenshot.png)
 
