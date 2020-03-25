@@ -6,5 +6,5 @@
 
 ![](madruga-screenshot.png)
 
-Your Name – [@Liftaris1](https://twitter.com/Liftaris1) – kaiobarb@gmail.com
+Kaio Barbosa – [@Liftaris1](https://twitter.com/Liftaris1) – kaiobarb@gmail.com
 
